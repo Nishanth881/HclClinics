@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/answer_background"
+    android:clickable="true"
+    android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:id="@+id/ans_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/answer_background"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:visibility="visible"
+        android:weightSum="3" >
+
+        <ImageView
+            android:id="@+id/green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:src="@drawable/excellence" />
+
+        <ImageView
+            android:id="@+id/good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:src="@drawable/good" />
+
+        <ImageView
+            android:id="@+id/average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:src="@drawable/average" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ans_lay_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ans_lay"
+        android:layout_marginTop="15dp"
+        android:background="@color/answer_background"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:visibility="visible"
+        android:weightSum="3" >
+
+        <ImageView
+            android:id="@+id/yelow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:src="@drawable/poor" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:src="@drawable/poor" />
+
+        <ImageView
+            android:id="@+id/red_smiley"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:src="@drawable/very_poor" />
+    </LinearLayout>
+
+</RelativeLayout>

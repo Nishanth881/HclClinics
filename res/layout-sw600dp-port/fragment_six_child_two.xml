@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ans_lay_t"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/question"
+    android:layout_gravity="center_vertical"
+    android:background="@color/answer_background"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:visibility="visible" >
+
+    <RelativeLayout
+        android:id="@+id/good_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/green_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/very_poor" />
+
+        <TextView
+            android:id="@+id/sad_text_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/green_two"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Very Difficult!"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/good_lay"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/sad_question_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/sad_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:singleLine="true"
+                android:text="Please let us know where we can improve"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/answer_sad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sad_question_lay"
+            android:layout_marginTop="10dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/ans_six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/unchecked"
+                android:drawablePadding="5dp"
+                android:text="Service"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ans_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/ans_six"
+                android:drawableLeft="@drawable/unchecked"
+                android:drawablePadding="5dp"
+                android:text="Infrastructure"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ans_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/ans_five"
+                android:drawableLeft="@drawable/unchecked"
+                android:drawablePadding="5dp"
+                android:text="Doctor/Nurse"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ans_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/ans_one"
+                android:drawableLeft="@drawable/unchecked"
+                android:drawablePadding="5dp"
+                android:text="Doctor Consultation"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/answer_sad_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/answer_sad"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/ans_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/unchecked"
+                android:drawablePadding="5dp"
+                android:text="Front desk staff"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ans_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/ans_three"
+                android:drawableLeft="@drawable/unchecked"
+                android:drawablePadding="5dp"
+                android:text="Others"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_gray"
+                android:textSize="18sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/answer_sad_two"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/ans_free_text"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/answer_sad_two"
+                android:layout_centerHorizontal="true"
+                android:hint="Please write something"
+                android:singleLine="true"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/button_back"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:src="@drawable/back" />
+
+            <ImageView
+                android:id="@+id/button_next"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:src="@drawable/next"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

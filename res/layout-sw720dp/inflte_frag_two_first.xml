@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ans_lay_t"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/question"
+    android:layout_gravity="center_vertical"
+    android:background="@color/answer_background"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:visibility="visible" >
+
+    <RelativeLayout
+        android:id="@+id/good_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/green_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/very_poor" />
+
+        <TextView
+            android:id="@+id/sad_text_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/green_two"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Very Difficult!"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/good_lay"
+        android:gravity="center_horizontal"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/sad_question_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/sad_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:singleLine="true"
+                android:text="Why was it difficult to book an appointment?"
+                android:textColor="@color/black"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/answer_sad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sad_question_lay"
+            android:layout_marginTop="20dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/ans_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/unchecked"
+                android:drawablePadding="5dp"
+                android:text="Phone line was busy"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ans_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/ans_one"
+                android:drawableLeft="@drawable/unchecked"
+                android:drawablePadding="5dp"
+                android:text="Phone went unanswered"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ans_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/ans_two"
+                android:drawableLeft="@drawable/unchecked"
+                android:drawablePadding="5dp"
+                android:text="Slow website"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ans_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/ans_three"
+                android:drawableLeft="@drawable/unchecked"
+                android:drawablePadding="5dp"
+                android:text="Poor response on queries"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+               <TextView
+                android:id="@+id/ans_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/ans_four"
+                android:drawableLeft="@drawable/unchecked"
+                android:drawablePadding="5dp"
+                android:text="Doctor unavailable"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/answer_sad"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/button_back"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:src="@drawable/back" />
+
+            <ImageView
+                android:id="@+id/button_next"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:src="@drawable/next" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

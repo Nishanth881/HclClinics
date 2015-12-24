@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="25dp" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp" >
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:singleLine="true"
+                android:text="4. How would you rate your visit today?"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ans_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/question"
+                android:layout_marginTop="15dp"
+                android:background="@color/answer_background"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:weightSum="3" >
+
+                <RelativeLayout
+                    android:id="@+id/effortless_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/green"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/excellence" />
+
+                    <TextView
+                        android:id="@+id/effort_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/green"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_horizontal"
+                        android:text="Great!"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/satisfactory_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/yelow"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/average" />
+
+                    <TextView
+                        android:id="@+id/satisfy_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/yelow"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_horizontal"
+                        android:text="Ok!"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/difficult_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/red_smiley"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/very_poor" />
+
+                    <TextView
+                        android:id="@+id/sad_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/red_smiley"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_horizontal"
+                        android:text="Not Good!"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ans_lay"
+                android:gravity="center_horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/sad_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:singleLine="true"
+                    android:text="Why was it difficult to book an appointment?"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button_back"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@+id/sad_question"
+                    android:background="#347AB6"
+                    android:text="Back"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/button_next"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@+id/button_back"
+                    android:background="#347AB6"
+                    android:text="Next"
+                    android:textColor="@color/white" />
+
+                <RelativeLayout
+                    android:id="@+id/answer_sad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sad_question"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center" >
+
+                    <CheckedTextView
+                        android:id="@+id/checkedTextView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/unchecked"
+                        android:drawablePadding="5dp"
+                        android:text="Line Was Busy"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <CheckedTextView
+                        android:id="@+id/ans_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/checkedTextView1"
+                        android:drawableLeft="@drawable/unchecked"
+                        android:drawablePadding="5dp"
+                        android:text="Doctor Unavailability"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <CheckedTextView
+                        android:id="@+id/ans_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/ans_two"
+                        android:drawableLeft="@drawable/unchecked"
+                        android:drawablePadding="5dp"
+                        android:text="Website Navigation Delay"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <CheckedTextView
+                        android:id="@+id/ans_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/ans_three"
+                        android:drawableLeft="@drawable/unchecked"
+                        android:drawablePadding="5dp"
+                        android:text="Others"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
